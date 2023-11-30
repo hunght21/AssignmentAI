@@ -21,7 +21,7 @@ if __name__ == "__main__":
     '''
     
     # load the data
-    filePath = "/content/drive/MyDrive/Homework 1/CIS419--Decision-Tree-Learning-Linear-Regression/data/multivariateData.dat"
+    filePath = "/content/drive/Documents/Desktop/AI-2023/AssAI/data/multivariateData.dat"
     file = open(filePath,'r')
     allData = np.loadtxt(file, delimiter=',')
 
