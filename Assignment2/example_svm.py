@@ -16,22 +16,22 @@ from sklearn import svm, datasets
 
 
 # load the data
-filename = 'data/svmData.dat'
+filename = 'C:/Users/ACER/OneDrive - Hanoi University of Science and Technology/Documents/Desktop/AI-2023/AssAI/Assignment2/svmData.dat'
 allData = np.loadtxt(filename, delimiter=',')
 
-X = allData[:,:-1]
-Y = allData[:,-1]
+X = allData[:, :-1]
+Y = allData[:, -1]
 
 
 C = 0.01
 
 # train the SVM
-print "Training the SVM"
-clf = svm.SVC(C=C,kernel='linear')
+print("Training the SVM")
+clf = svm.SVC(C=C, kernel='linear')
 clf.fit(X, Y)
 
-print ""
-print "Testing the SVM"
+print("")
+print("Testing the SVM")
 
 h = .02  # step size in the mesh
 
@@ -48,6 +48,6 @@ plt.pcolormesh(xx, yy, Z, cmap=plt.cm.Paired)
 
 # Plot also the training points
 plt.scatter(X[:, 0], X[:, 1], c=Y, cmap=plt.cm.Paired)
-plt.title('SVM decision surface with C = '+str(C))
+plt.title('SVM decision surface with C = ' + str(C))
 plt.axis('tight')
 plt.show()
